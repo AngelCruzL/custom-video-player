@@ -1,5 +1,5 @@
-body {
-  background-color: red;
+@import "./buttons.css";
 
-  
+body {
+  background: #43dde6;
 }
