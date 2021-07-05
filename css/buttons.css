@@ -3,6 +3,11 @@
   block-size: 32px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.9);
 }
 
 #backward {

@@ -8,6 +8,37 @@
     <title>Custom Video Player</title>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <button id="backward" class="button"></button>
+    <button id="play" class="button"></button>
+    <button id="pause" hidden class="button"></button>
+    <button id="forward" class="button"></button>
+    <video
+      src="video/butterfly.mp4"
+      controls
+      muted
+      width="328"
+      id="video"
+    ></video>
+
+    <script>
+      const $video = document.getElementById('video');
+      const $play = document.getElementById('play');
+      const $pause = document.getElementById('pause');
+
+      $play.addEventListener('click', handlePlay);
+      $pause.addEventListener('click', handlePause);
+
+      function handlePlay() {
+        $video.play();
+        $play.hidden = true;
+        $pause.hidden = false;
+      }
+
+      function handlePause() {
+        $video.pause();
+        $play.hidden = false;
+        $pause.hidden = true;
+      }
+    </script>
   </body>
 </html>
