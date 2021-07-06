@@ -8,37 +8,43 @@
     <title>Custom Video Player</title>
   </head>
   <body>
-    <button id="backward" class="button"></button>
-    <button id="play" class="button"></button>
-    <button id="pause" hidden class="button"></button>
-    <button id="forward" class="button"></button>
-    <video
-      src="video/butterfly.mp4"
-      controls
-      muted
-      width="328"
-      id="video"
-    ></video>
+    <div class="wrapper">
+      <div class="player">
+        <h2 class="player-title">Video cool</h2>
+        <div class="player-actions">
+          <button
+            id="backward"
+            class="button"
+            aria-label="Retroceder 10 segundos"
+            title="Retroceder 10 segundos"
+          ></button>
+          <button
+            id="play"
+            class="button"
+            aria-label="Reproducir"
+            title="Reproducir"
+          ></button>
+          <button
+            id="pause"
+            hidden
+            class="button"
+            aria-label="Pausar"
+            title="Pausar"
+          ></button>
+          <button
+            id="forward"
+            class="button"
+            aria-label="Adelantar 10 segundos"
+            title="Adelantar 10 segundos"
+          ></button>
+        </div>
+        <video src="video/butterfly.mp4" width="328" id="video"></video>
+        <div class="player-progress">
+          <input type="range" />
+        </div>
+      </div>
+    </div>
 
-    <script>
-      const $video = document.getElementById('video');
-      const $play = document.getElementById('play');
-      const $pause = document.getElementById('pause');
-
-      $play.addEventListener('click', handlePlay);
-      $pause.addEventListener('click', handlePause);
-
-      function handlePlay() {
-        $video.play();
-        $play.hidden = true;
-        $pause.hidden = false;
-      }
-
-      function handlePause() {
-        $video.pause();
-        $play.hidden = false;
-        $pause.hidden = true;
-      }
-    </script>
+    <script src="js/index.js"></script>
   </body>
 </html>
