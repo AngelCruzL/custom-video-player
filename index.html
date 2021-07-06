@@ -10,37 +10,39 @@
   <body>
     <div class="wrapper">
       <div class="player">
-        <h2 class="player-title">Video cool</h2>
-        <div class="player-actions">
-          <button
-            id="backward"
-            class="button"
-            aria-label="Retroceder 10 segundos"
-            title="Retroceder 10 segundos"
-          ></button>
-          <button
-            id="play"
-            class="button"
-            aria-label="Reproducir"
-            title="Reproducir"
-          ></button>
-          <button
-            id="pause"
-            hidden
-            class="button"
-            aria-label="Pausar"
-            title="Pausar"
-          ></button>
-          <button
-            id="forward"
-            class="button"
-            aria-label="Adelantar 10 segundos"
-            title="Adelantar 10 segundos"
-          ></button>
-        </div>
         <video src="video/butterfly.mp4" width="328" id="video"></video>
-        <div class="player-progress">
-          <input type="range" />
+        <div class="player-overlay">
+          <h2 class="player-title">Video cool</h2>
+          <div class="player-actions">
+            <button
+              id="backward"
+              class="button"
+              aria-label="Retroceder 10 segundos"
+              title="Retroceder 10 segundos"
+            ></button>
+            <button
+              id="play"
+              class="button"
+              aria-label="Reproducir"
+              title="Reproducir"
+            ></button>
+            <button
+              id="pause"
+              hidden
+              class="button"
+              aria-label="Pausar"
+              title="Pausar"
+            ></button>
+            <button
+              id="forward"
+              class="button"
+              aria-label="Adelantar 10 segundos"
+              title="Adelantar 10 segundos"
+            ></button>
+          </div>
+          <div class="player-progress">
+            <input id="progress" type="range" min="0" value="0" step="1" />
+          </div>
         </div>
       </div>
     </div>
