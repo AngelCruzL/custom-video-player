@@ -16,6 +16,7 @@ body {
   inline-size: 100%;
   aspect-ratio: 16 / 9;
   vertical-align: middle;
+  object-fit: cover;
 }
 .player-title {
   color: #fff;
